@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{%static 'songs/css/style.css'%}">
+        <title> BeatX </title>
+    </head>
+    <body>
+        <!-- left panel -->
+        <div class="navigation">
+            <nav>
+                    <ul>
+                        <header>
+                            <img src="{%static 'songs/img/logo.png'%}">
+                        </header>
+                        <li><a href="/songs/"><img src="{%static 'songs/svg/home.svg'%}"> Home </a></li>
+                        <li><a href="#"><img src="{%static 'songs/svg/playlists.svg'%}"> Playlists </a></li>
+                        <li><a href="/songs/searchMusic/"><img src="{%static 'songs/svg/local music.svg'%}"> Local Music </a></li>
+                        <li><a href="#"><img src="{%static 'songs/svg/add friend.svg'%}"> Find Friends </a></li>
+                        <li><a href="#"><img src="{%static 'songs/svg/create playlists.svg'%}"> Create Playlists </a></li>
+
+                    </ul>
+            </nav>
+        </div>
+        {% block content %}
+        {% endblock %}
+      </body>
+    </html>

@@ -1,0 +1,16 @@
+{% load static %}
+<!-- include the middle content for the upload button -->
+<!-- Middle panel -->
+<div class="middle-content">
+    <!-- Searching Music -->
+    <div class="search-bar">
+        <form method="GET" action="/songs/searchMusic/">
+            <input type="text" name='searcht' class="searchTerm" placeholder="Search Music">
+            <!-- <a href="#"><img class="search" src="{%static 'songs/svg/search.svg' %}" style="width: 20px; height: 20px;"></a> -->
+            <!-- Filter of Search bar -->
+            <input type="submit" name="" value="search">
+            <a href="#"><img class="filter" src="{%static 'songs/svg/controls.svg' %}" style="width: 20px; height: 20px;"></a>
+        </form>
+    </div>
+    {% block content %}
+    {% endblock %}
