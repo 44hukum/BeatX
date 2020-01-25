@@ -1,0 +1,24 @@
+{% load static %}
+<!-- Whole Content of BeatX homepage -->
+<div class="main-content">
+<!-- Name of Searched Song by User -->
+<div class="searched-song">
+ <h1><span>"Starboy"</span> &nbsp; songs </h1>
+</div>
+<!-- Results of Searched Songs -->
+<div class="song-title">
+ <a href="#"><img class="play-btn" src="{%static 'songs/svg/play.svg' %}"></a>
+ <img class="cover-art" src="{%static 'songs/img/StarBoy.png' %}">
+ <div class="title">
+    <h1> StarBoy </h1>
+    <p> Uploaded by <a href="#"> The Weekend </a></p>
+ </div>
+<!-- <p><img class="timer" src="svg/time.svg">3:00</p> -->
+ <a href="#"><img class="music-playlist" src="{%static 'songs/svg/music playlists.svg' %}"></a>
+ <img class="favourite" src="{%static 'songs/svg/favourite.svg' %}">
+ <img class="download" src="{%static 'songs/svg/download.svg' %}">
+</div>
+</div>
+</div>
+{% block content %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'songs/base/header.html' %}
+{% block content %}
+{% load static %}
+    {% include 'songs/base/right1.html' %}
+    <!-- search  -->
+    {% include 'songs/base/search.html' %}
+    {% if obj == "home"%}
+            <!-- loads the content -->
+        {% include 'songs/base/content.html' %}
+    {% elif obj == "searched"%}
+    <!-- IF someone searched  -->
+    {% include 'songs/base/searchresult.html' %}
+    {% else %}
+    {% include 'songs/base/content.html' %}
+    {% endif %}
+
+  {% endblock %}

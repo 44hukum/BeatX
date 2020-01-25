@@ -1,0 +1,29 @@
+{% load static %}
+<!-- friend list -->
+<div class="friend-list">
+    <img src="{%static 'songs/svg/friendlist.svg' %}">
+    <h1> Friend Lists </h1>
+</div>
+<div class="horizontal-line">
+    <hr></hr>
+</div>
+<!-- Lists of User's Friends -->
+<div class="friends">
+    <div class="user-1">
+        <img src="{%static 'songs/img/chyan.png' %}">
+        <h1> Chyan Zhy </h1>
+        <img class="listen" src="{%static 'songs/svg/listen.svg' %}">
+        <a href="#"><img class="chat" src="{%static 'songs/svg/chat.svg' %}"></a>
+        <a href="#"><img class="option" src="{%static 'songs/svg/option.svg' %}"></a>
+</div>
+</div>
+<section>
+  <!-- session delete -->
+  <div class="log-out">
+    <form action="/logout/">
+      <button type="submit" name="button">Log Out</button>
+    </form>
+  </div>
+</section>
+{% block content %}
+{% endblock %}

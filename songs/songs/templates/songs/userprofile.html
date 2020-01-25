@@ -1,0 +1,57 @@
+{% extends 'songs/base/header.html' %}
+{% block content %}
+{% load static %}
+        <!-- right panel -->
+        <div class="user-content">
+            {% include 'songs/base/right2.html' %}
+            </div>
+        <!-- Middle panel -->
+        <div class="middle-content">
+            <!-- Info of User -->
+           <div class="user-info">
+             {% if profile %}
+           <img src="/static/{{profile}}" alt="profile" >
+           {% else %}
+             <img src="{%static 'songs/img/def.png'%}">
+             {% endif %}
+                <div class="username">
+                    <h1>{{ username }}</h1>
+                    <p>@{{username}}</p>
+                </div>
+           </div>
+           <div class="user-social-details">
+                <div class="user-friends">
+                    <a href="#" style="left: 43em;">
+                        <h1> Friends </h1>
+                        <!-- User Friends will be updated from User's Database -->
+                         {% if friend %}
+                        <h2>{{ friend }} </h2>
+                        {% else %}
+                        <h2>0</h2>
+                         {% endif %}
+                    </a>
+                    <a href="#" style="right: 47em;">
+                        <h1> Playlists </h1>
+                        <!-- Playlists will be updated from User's Playlists Database -->
+                        {% if playlist %}
+                       <h2>{{ playlist }} </h2>
+                       {% else %}
+                       <h2>0</h2>
+                        {% endif %}
+                    </a>
+                </div>
+           </div>
+           <div class="user-bio">
+               <!-- User's Bio can change when user want from user input -->
+               <p> Music Lover/Singer </p>
+           </div>
+           <div class="edit-profile">
+                <a href="/updateData/"> Edit Profile </a>
+           </div>
+           {%if validF == 1%}
+                {% include 'update.html' %}
+           {% else %}
+           {% endif %}
+        </div>
+
+  {% endblock %}

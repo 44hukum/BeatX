@@ -1,0 +1,20 @@
+{% load static %}
+<!-- right panel of the beatX -->
+<section class="user-content">
+    <!-- Profile of User -->
+    <div class="user-profile">
+      {% if profile %}
+      <img src="/static/{{profilepc}}" alt="profile">
+        {% else %}
+        <img src="{%static 'songs/img/def.png'%}" alt="profile">
+        {% endif %}
+        <div class="info">
+            <h1>{{username}}</h1>
+            <a href="/songs/profile/"> View Profile <img src="{%static 'songs/svg/forward.svg' %}" style="width: 10px; height: 10px;"></a>
+        </div>
+    </div>
+  {% include 'songs/base/right2.html' %}
+
+</section>
+{% block content %}
+{% endblock %}
