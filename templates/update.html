@@ -1,0 +1,17 @@
+
+{% block content %}
+{% endblock %}
+<h1>update form</h1>
+<form action="/updateData/" method="post">
+  {% csrf_token %}
+<input type="text" name="upuname" value="{{ a.username }}"><br>
+<label for="gender">Gender: </label>
+<input  type="radio" name="gender" value="Male">Male
+<input  type="radio" name="gender" value="Female">Female
+<input  type="radio" name="gender" value="Hidden">prefer not to say<br>
+<input  type="text" name="phone_number" value="{{ a.phone_number }}"><br>
+<input  type="password" name="password" value="{{ a.password }}"><br>
+<input type="submit" value="update">
+</form>
+{{ succ }}
+<a href="/login/">Home</a>
